@@ -19,13 +19,13 @@ def download_pdf(url, folder):
 def main():
     prefix = "https://www.chandamama.in/resources/teluguNew/{}/Chandamama-{}-{}.pdf"
 
-    folder = "pdf_files"
+    folder = "chandamama_pdfs"
     if not os.path.exists(folder):
         os.makedirs(folder)
 
     failed_urls = []
     url = ""
-    for year in range(1991, 2013):
+    for year in range(1947, 2013):
         for month in range(1, 13):
             try:
                 url = prefix.format(year, year, month)
